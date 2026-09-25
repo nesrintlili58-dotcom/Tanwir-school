@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="منصة المعهد الخاص التنوير التعليمية">
+<title>منصة المعهد الخاص التنوير</title>
+<style>
+:root{--blue:#0b4ea2;--blue2:#0d6efd;--gold:#e5ad2f;--bg:#f5f8fc;--text:#172033;--muted:#667085;--card:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--text)}
+header{background:linear-gradient(135deg,#083b7c,#0d6efd);color:#fff;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px;position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800}.logo{width:52px;height:52px;border-radius:14px;object-fit:cover;background:#fff}
+nav{display:flex;gap:8px;flex-wrap:wrap}nav button,.btn{border:0;border-radius:10px;padding:10px 14px;cursor:pointer;font-weight:700}
+nav button{background:#ffffff18;color:#fff}nav button:hover{background:#ffffff30}
+main{max-width:1100px;margin:auto;padding:28px 16px}.hero{background:linear-gradient(135deg,#fff,#eef5ff);border-radius:24px;padding:34px;display:grid;grid-template-columns:1.4fr .6fr;gap:20px;align-items:center;box-shadow:0 8px 30px #17365d12}
+h1{font-size:clamp(28px,5vw,48px);margin:0 0 12px;color:var(--blue)}h2{color:var(--blue)}
+.hero p{font-size:18px;line-height:1.9;color:var(--muted)}.hero .biglogo{width:min(230px,70vw);aspect-ratio:1;object-fit:contain;display:block;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:22px}.card{background:var(--card);padding:20px;border-radius:18px;box-shadow:0 5px 20px #17365d0c;border:1px solid #e7edf5}.card h3{margin-top:0}.icon{font-size:30px}
+section{margin-top:30px}.hidden{display:none}.login{max-width:500px;margin:35px auto}.field{display:flex;flex-direction:column;gap:7px;margin:12px 0}.field input,.field select,.field textarea{padding:12px;border:1px solid #ccd6e3;border-radius:10px;font:inherit}.btn{background:var(--blue);color:#fff}.btn.secondary{background:#eef4ff;color:var(--blue)}.note{padding:12px;background:#fff8df;border-right:4px solid var(--gold);border-radius:8px;line-height:1.7}
+footer{text-align:center;color:var(--muted);padding:35px 15px}.badge{display:inline-block;background:#eaf2ff;color:var(--blue);padding:6px 10px;border-radius:999px;font-size:13px}
+@media(max-width:700px){header{align-items:flex-start;flex-direction:column}.hero{grid-template-columns:1fr;text-align:center;padding:24px}.hero .biglogo{width:170px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <img class="logo" src="logo.jpg" alt="شعار المعهد">
+    <span>المعهد الخاص التنوير</span>
+  </div>
+  <nav>
+    <button onclick="show('home')">الرئيسية</button>
+    <button onclick="show('about')">عن المنصة</button>
+    <button onclick="show('login')">تسجيل الدخول</button>
+  </nav>
+</header>
+
+<main>
+<section id="home">
+  <div class="hero">
+    <div>
+      <span class="badge">منصة تعليمية رقمية</span>
+      <h1>منصة المعهد الخاص التنوير</h1>
+      <p>فضاء رقمي يجمع التلاميذ والأساتذة والإدارة في مكان واحد: الدروس، الفروض، الأعداد، الإعلانات والجدول الدراسي.</p>
+      <button class="btn" onclick="show('login')">الدخول إلى المنصة</button>
+    </div>
+    <img class="biglogo" src="logo.jpg" alt="شعار المعهد">
+  </div>
+  <div class="grid">
+    <div class="card"><div class="icon">📚</div><h3>الدروس</h3><p>الوصول إلى الدروس والموارد التعليمية.</p></div>
+    <div class="card"><div class="icon">📝</div><h3>الفروض والاختبارات</h3><p>تنظيم التقييمات ومتابعة النتائج.</p></div>
+    <div class="card"><div class="icon">📊</div><h3>الأعداد</h3><p>عرض النتائج والمعدلات بطريقة واضحة.</p></div>
+    <div class="card"><div class="icon">📢</div><h3>الإعلانات</h3><p>آخر أخبار وتنبيهات المعهد.</p></div>
+    <div class="card"><div class="icon">🗓️</div><h3>الجدول</h3><p>الاطلاع على جدول الحصص.</p></div>
+    <div class="card"><div class="icon">👨‍🏫</div><h3>فضاء الأستاذ</h3><p>إضافة الدروس والمتابعة.</p></div>
+  </div>
+</section>
+
+<section id="about" class="hidden">
+  <div class="card">
+    <h2>عن المنصة</h2>
+    <p>هذه الواجهة مصممة خصيصًا للمعهد الخاص التنوير لتكون نقطة الدخول إلى خدمات المعهد الرقمية.</p>
+    <div class="note">النسخة الحالية هي واجهة جاهزة للنشر. الحسابات والبيانات المشتركة تحتاج ربطها بخدمة قاعدة بيانات واستضافة قبل استعمالها فعليًا من طرف التلاميذ والأساتذة.</div>
+  </div>
+</section>
+
+<section id="login" class="hidden">
+  <div class="card login">
+    <h2>تسجيل الدخول</h2>
+    <div class="field"><label>اسم المستخدم</label><input id="username" autocomplete="username" placeholder="أدخل اسم المستخدم"></div>
+    <div class="field"><label>كلمة المرور</label><input id="password" type="password" autocomplete="current-password" placeholder="أدخل كلمة المرور"></div>
+    <div class="field"><label>نوع الحساب</label>
+      <select id="role"><option value="student">تلميذ</option><option value="teacher">أستاذ</option><option value="admin">إدارة</option></select>
+    </div>
+    <button class="btn" onclick="login()">دخول</button>
+    <p id="msg"></p>
+  </div>
+</section>
+
+<section id="dashboard" class="hidden">
+  <div class="card">
+    <h2>فضاء المستخدم</h2>
+    <p id="welcome"></p>
+    <div class="grid">
+      <div class="card"><div class="icon">📚</div><h3>الدروس</h3><p>الدروس والموارد ستظهر هنا بعد ربط قاعدة البيانات.</p></div>
+      <div class="card"><div class="icon">📊</div><h3>النتائج</h3><p>الأعداد والمعدلات ستظهر هنا.</p></div>
+      <div class="card"><div class="icon">📢</div><h3>الإعلانات</h3><p>آخر إعلانات المعهد.</p></div>
+    </div>
+    <button class="btn secondary" onclick="logout()">تسجيل الخروج</button>
+  </div>
+</section>
+</main>
+<footer>© المعهد الخاص التنوير — منصة تعليمية</footer>
+<script>
+function show(id){
+  ['home','about','login','dashboard'].forEach(x=>document.getElementById(x).classList.toggle('hidden',x!==id));
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function login(){
+  const u=document.getElementById('username').value.trim();
+  const r=document.getElementById('role').value;
+  if(!u){document.getElementById('msg').textContent='اكتب اسم المستخدم أولاً.';return}
+  document.getElementById('welcome').textContent='مرحبًا '+u+' 👋 — هذه نسخة الواجهة. عند ربط قاعدة البيانات يصبح الدخول حقيقيًا.';
+  show('dashboard');
+}
+function logout(){show('home')}
+</script>
+</body>
+</html>
